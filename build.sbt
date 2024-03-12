@@ -9,7 +9,7 @@ enablePlugins(OssumIncPlugin)
 
 Global / onChangedBuildSource := ReloadOnSourceChanges
 (Global / excludeLintKeys) ++= Set(mainClass)
-Global / scalaVersion := "3.3.3"
+Global / scalaVersion := "3.4.0"
 scalacOptions := Seq(
   "-deprecation",
   "-feature",
@@ -17,8 +17,8 @@ scalacOptions := Seq(
   "-Werror",
   "-pagewidth:120",
   "-explain",
-  // "-rewrite",
-  //"-source:3.4-migration"
+  "-rewrite",
+  "-source:3.4-migration"
 )
 
 lazy val riddl: Project = Root("", "scala-3.4-19872", startYr = 2024)
